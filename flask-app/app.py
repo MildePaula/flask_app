@@ -5,7 +5,7 @@ app = Flask (__name__)
 @app.route("/")
 def get_list_characters_page():
     url = "https://rickandmortyapi.com/api/character/"
-    response = urllib.request.urlopen(url) #acesso a url
+    response = urllib.request.urlopen(url) 
     data = response.read()
     characters_dict = json.loads(data)
 
@@ -14,7 +14,7 @@ def get_list_characters_page():
 @app.route("/profile/<id>")
 def get_profile(id):
     url = "https://rickandmortyapi.com/api/character/" + id
-    response = urllib.request.urlopen(url) #acesso a url
+    response = urllib.request.urlopen(url) 
     data = response.read()
     characters_dict = json.loads(data)
 
